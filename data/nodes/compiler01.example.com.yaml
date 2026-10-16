@@ -1,0 +1,7 @@
+---
+# A compiler, not a CA: ovadm enrolled it against the primary's CA with its
+# own CA switched off, and the module keeps it that way.
+openvox_server::ca: false
+openvox_server::ca_server: 'puppet.example.com'
+
+codavox::agent_publisher: 'https://puppet.example.com:8150'

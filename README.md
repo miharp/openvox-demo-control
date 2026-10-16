@@ -1,5 +1,18 @@
 # OpenVox Control Repository Template
 
+> **This copy is a demo.** It was made from
+> [OpenVoxProject/control-repo-template](https://github.com/OpenVoxProject/control-repo-template)
+> as step 3 of the [OpenVox getting started guide](https://docs.openvoxproject.org/openvox/latest/getting_started.html#step-3-set-up-a-control-repository)
+> describes, for a screenshare of [ovadm](https://github.com/miharp/ovadm) and
+> [codavox](https://github.com/miharp/codavox). On top of the template it adds:
+>
+> - `Puppetfile`: openvox_server, openvox_agent, openvox_tune, codavox, and their dependencies.
+> - `manifests/site.pp`: `puppet.example.com` is `role::primary`, `compilerNN.example.com` is `role::compiler`, every other node is `role::agent`.
+> - `site-modules/role/manifests/{primary,compiler,agent}.pp`.
+> - `data/common.yaml` and `data/nodes/`: the openvox8 collection, codavox's settings, and the compiler's CA switched off.
+> - `scripts/config_version.sh`: environments codavox serves are labelled by `codavox-config-version`, `<environment>-<code_id>`.
+
+
 A template [control repository](https://docs.openvoxproject.org/openvox/latest/environments_about.html)
 with the minimum scaffolding needed to get started managing infrastructure with
 [OpenVox](https://voxpupuli.org/openvox/), using

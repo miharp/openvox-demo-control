@@ -1,0 +1,4 @@
+---
+# The primary fetches code from its own publisher, named by certname: the
+# publisher presents this node's certificate, and localhost would not match it.
+codavox::agent_publisher: "https://%{trusted.certname}:8150"

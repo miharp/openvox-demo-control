@@ -26,7 +26,15 @@ File { backup => false }
 #
 # For more on node definitions, see: https://docs.openvoxproject.org/openvox/latest/lang_node_definitions.html
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+  include role::agent
+}
+
+# The OpenVox Server: certificate authority, and codavox's publisher.
+node 'puppet.example.com' {
+  include role::primary
+}
+
+# Compilers, added with ovadm. Their certificates carry pp_role: openvox_compiler.
+node /^compiler\d+\.example\.com$/ {
+  include role::compiler
 }
