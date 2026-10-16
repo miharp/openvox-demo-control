@@ -8,7 +8,7 @@
 >
 > - `Puppetfile`: openvox_server, openvox_agent, openvox_tune, codavox, and their dependencies.
 > - `manifests/site.pp`: `puppet.example.com` is `role::primary`, `compilerNN.example.com` is `role::compiler`, every other node is `role::agent`.
-> - `site-modules/role/manifests/{primary,compiler,agent}.pp`.
+> - `site-modules/role/manifests/{primary,compiler,agent}.pp`. The screenshare adds codavox to the first two on camera, three `include` lines.
 > - `data/common.yaml` and `data/nodes/`: the openvox8 collection, codavox's settings, and the compiler's CA switched off.
 > - `scripts/config_version.sh`: environments codavox serves are labelled by `codavox-config-version`, `<environment>-<code_id>`.
 > - Removed: the template's example facts in `site-modules/profile` (`facts.d/` and `lib/facter/`) and their specs. On a stock AlmaLinux node they fail on every run: the PowerShell fact is executable, so Facter runs it on Linux (OpenVoxProject/control-repo-template#9), the shell fact needs a system Ruby, and `total_free_memory_mb` adds `nil` when there is no swap.
