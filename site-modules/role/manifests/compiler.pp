@@ -4,6 +4,4 @@
 # CA switched off (node data).
 class role::compiler {
   include openvox_server
-  include codavox::agent
-  include codavox::server
 }
