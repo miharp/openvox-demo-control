@@ -4,4 +4,5 @@
 # run without changing what ovadm set up.
 class role::primary {
   include openvox_server
+  include codavox::primary
 }
