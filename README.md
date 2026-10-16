@@ -11,6 +11,7 @@
 > - `site-modules/role/manifests/{primary,compiler,agent}.pp`.
 > - `data/common.yaml` and `data/nodes/`: the openvox8 collection, codavox's settings, and the compiler's CA switched off.
 > - `scripts/config_version.sh`: environments codavox serves are labelled by `codavox-config-version`, `<environment>-<code_id>`.
+> - Removed: the template's example facts in `site-modules/profile` (`facts.d/` and `lib/facter/`) and their specs. On a stock AlmaLinux node they fail on every run: the PowerShell fact is executable, so Facter runs it on Linux (OpenVoxProject/control-repo-template#9), the shell fact needs a system Ruby, and `total_free_memory_mb` adds `nil` when there is no swap.
 
 
 A template [control repository](https://docs.openvoxproject.org/openvox/latest/environments_about.html)
