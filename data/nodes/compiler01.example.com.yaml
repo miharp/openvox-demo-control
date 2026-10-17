@@ -3,3 +3,8 @@
 # own CA switched off, and the module keeps it that way.
 openvox_server::ca: false
 openvox_server::ca_server: 'puppet.example.com'
+
+# OpenVox Server sized for this machine by openvox_tune's plan.
+openvox_server::max_active_instances: 7
+openvox_server::heap_mb: 4096
+openvox_server::reserved_code_cache_mb: 1024
