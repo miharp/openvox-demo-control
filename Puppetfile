@@ -11,11 +11,6 @@ mod 'puppetlabs/hocon',      '2.0.0'
 mod 'puppetlabs/inifile',    '6.5.0'
 mod 'puppetlabs/stdlib',     '9.7.0'
 
-# codavox: code distribution to the compilers, and static catalogs.
-mod 'miharp/codavox',                  '0.6.3'
-mod 'puppetlabs/puppet_authorization', '1.0.1'
-mod 'puppetlabs/concat',               '10.1.0'
-
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/main/doc/puppetfile.mkd#examples
 #mod 'nginx',
