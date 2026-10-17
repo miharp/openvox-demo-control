@@ -1,0 +1,3 @@
+---
+# The primary fetches code from its own publisher, named by certname.
+codavox::agent_publisher: "https://%{trusted.certname}:8150"
