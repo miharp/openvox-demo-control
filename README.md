@@ -6,11 +6,12 @@
 > describes, for a screenshare of [ovadm](https://github.com/miharp/ovadm) and
 > [codavox](https://github.com/miharp/codavox). On top of the template it adds:
 >
-> - `Puppetfile`: openvox_server, openvox_agent, openvox_tune, codavox, and their dependencies.
+> - `Puppetfile`: openvox_server, openvox_agent and openvox_tune, and their dependencies.
 > - `manifests/site.pp`: `puppet.example.com` is `role::primary`, `compilerNN.example.com` is `role::compiler`, every other node is `role::agent`.
-> - `site-modules/role/manifests/{primary,compiler,agent}.pp`. The screenshare adds codavox to the first two on camera, three `include` lines.
-> - `data/common.yaml` and `data/nodes/`: the openvox8 collection, codavox's settings, and the compiler's CA switched off.
-> - `scripts/config_version.sh`: environments codavox serves are labelled by `codavox-config-version`, `<environment>-<code_id>`.
+> - `site-modules/role/manifests/{primary,compiler,agent}.pp`.
+> - `data/common.yaml` and `data/nodes/`: the openvox8 collection, and the compiler's CA switched off.
+>
+> The screenshare then adds codavox on camera: its module and two dependencies in the `Puppetfile`, its settings in Hiera, a hand-off in `scripts/config_version.sh` so catalogs are labelled `<environment>-<code_id>`, and three `include` lines in the two server roles.
 > - Removed: the template's example facts in `site-modules/profile` (`facts.d/` and `lib/facter/`) and their specs. On a stock AlmaLinux node they fail on every run: the PowerShell fact is executable, so Facter runs it on Linux (OpenVoxProject/control-repo-template#9), the shell fact needs a system Ruby, and `total_free_memory_mb` adds `nil` when there is no swap.
 
 

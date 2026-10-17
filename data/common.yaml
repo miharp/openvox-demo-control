@@ -2,10 +2,3 @@
 # OpenVox Server comes from the openvox8 collection, as ovadm installed it.
 # No version is pinned, so the first Puppet run keeps what ovadm installed.
 openvox_server::collection: 'openvox8'
-
-# codavox's settings. They do nothing until the roles include codavox's
-# classes; basedir is r10k's basedir.
-codavox::package_ensure: '0.11.0'
-codavox::basedir: '/etc/puppetlabs/code/environments'
-codavox::publish_allow_roles:
-  - 'openvox_compiler'
