@@ -8,3 +8,8 @@ codavox::package_ensure: '0.11.0'
 codavox::basedir: '/etc/puppetlabs/code/environments'
 codavox::publish_allow_roles:
   - 'openvox_compiler'
+
+# Keep Puppet running on every node. openvox_server declares openvox_agent on
+# the servers; role::agent includes it everywhere else.
+openvox_agent::service_ensure: 'running'
+openvox_agent::service_enable: true
