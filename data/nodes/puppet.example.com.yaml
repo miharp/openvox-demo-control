@@ -1,5 +1,0 @@
----
-# OpenVox Server sized for this machine by openvox_tune's plan.
-openvox_server::max_active_instances: 2
-openvox_server::heap_mb: 1536
-openvox_server::reserved_code_cache_mb: 512
