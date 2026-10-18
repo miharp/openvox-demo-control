@@ -8,3 +8,5 @@ openvox_server::ca_server: 'puppet.example.com'
 openvox_server::max_active_instances: 7
 openvox_server::heap_mb: 4096
 openvox_server::reserved_code_cache_mb: 1024
+
+codavox::agent_publisher: 'https://puppet.example.com:8150'

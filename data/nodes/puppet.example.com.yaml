@@ -3,3 +3,6 @@
 openvox_server::max_active_instances: 2
 openvox_server::heap_mb: 1536
 openvox_server::reserved_code_cache_mb: 512
+
+# The primary fetches code from its own publisher, named by certname.
+codavox::agent_publisher: "https://%{trusted.certname}:8150"
