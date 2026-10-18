@@ -1,0 +1,7 @@
+---
+# A second compiler, added on Day Two: its CA off, as on compiler01, and
+# codavox fetching code from the main server. openvox_tune sizes it later.
+openvox_server::ca: false
+openvox_server::ca_server: 'puppet.example.com'
+
+codavox::agent_publisher: 'https://puppet.example.com:8150'
